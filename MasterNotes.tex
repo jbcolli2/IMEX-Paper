@@ -1,0 +1,56 @@
+\documentclass{amsart}
+
+
+\usepackage{JBpack}
+
+
+\begin{document}
+\title{Master Notes}
+\author{J.B. Collins, Jehanzeb Chaudry, John Shadid}
+\maketitle
+
+
+I figure this can be a central document to keep track of major decisions for the paper and a bibliography.
+
+\section{Methods}
+	The methods we want to test.
+	\begin{enumerate}
+		\item 2nd order IMEX midpoint \cite{Pareschi:2003}
+			\begin{table}[h]
+			\begin{tabular}{l|ll}
+			0   & 0   & 0 \\
+			1/2 & 1/2 & 0 \\ \hline
+			    & 0   & 1
+			\end{tabular}
+			\hspace{.5in}
+			\begin{tabular}{l|ll}
+			0   & 0 & 0   \\
+			1/2 & 0 & 1/2 \\ \hline
+			    & 0 & 1  
+			\end{tabular}
+			\end{table}
+		\item SSP3(3,3,2)
+		\begin{table}[h]
+		\begin{tabular}{l|lll}
+		0   & 0   & 0   & 0   \\
+		1   & 1   & 0   & 0   \\
+		1/2 & 1/4 & 1/4 & 0   \\ \hline
+		    & 1/6 & 1/6 & 2/3
+		\end{tabular}
+		\hspace{.5in}
+		\begin{tabular}{l|lll}
+		$\g$   & $\g$       & 0    & 0    \\
+		1-$\g$ & 1-$2\g$    & $\g$ & 0    \\
+		1/2    & 1/2 - $\g$ & 0    & $\g$ \\ \hline
+		       & 1/6        & 1/6  & 2/3 
+		\end{tabular}
+		\end{table}		
+		with $\g = 1- \frac{1}{\sqrt{2}}$.
+	\end{enumerate}
+
+
+\bibliographystyle{plain}
+\bibliography{MasterNotes}
+
+
+\end{document}
